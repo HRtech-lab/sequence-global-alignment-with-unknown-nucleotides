@@ -3,16 +3,11 @@ import random
 import sys
 from Bio import SeqIO
 
-#http://www.biorecipes.com/DynProgBasic/code.html
-#https://rosettacode.org/wiki/Longest_common_subsequence#Python
-#http://www.biorecipes.com/DarwinHelp/BToInt.html
-#http://users-cs.au.dk/cstorm/courses/AiBS_e14/slides/AffineGapcost.pdf
-
 
 for seq_record1 in SeqIO.parse("Lysozyme-c.fasta", "fasta"):
 	chromosome1 = seq_record1.seq
 	
-for seq_record2 in SeqIO.parse("แ-lactalbumin.fasta", "fasta"):
+for seq_record2 in SeqIO.parse("รก-lactalbumin.fasta", "fasta"):
 	chromosome2 = seq_record2.seq
 	
 k = random.randrange(1,10)
@@ -42,15 +37,6 @@ while x2 < y2:
 
 dna1 = seq_record1.seq
 dna2 = seq_record2.seq
-
-#dna1 = list("ACGGTAG")
-#dna2 = list("CCTAAG")
-
-#dna1 = list("ACCATGTTT")
-#dna2 = list("CCAAGTT")
-
-#dna1 = list("ATCG")
-#dna2 = list("TCG")
 
 n=len(dna1) 
 m=len(dna2) 
